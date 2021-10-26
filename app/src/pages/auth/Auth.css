@@ -1,0 +1,12 @@
+.bg-gradient {
+    background-image: url(../../images/background.png);
+    background-size: cover;
+}
+
+@media screen and (min-width: 768px) {
+    .bg-dino { 
+        background-image: url(../../images/dinoware.png) ;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
