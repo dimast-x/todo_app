@@ -27,7 +27,6 @@ export default function UserLogin() {
         password: pass,
       },
     ).then((response: any) => {
-      console.log(response)
       localStorage.setItem("jwt", response.data);
       setUser(true)
     }).catch(err => { console.log('err', err); alert('invalid login') })

@@ -30,7 +30,6 @@ export default function Register() {
       },
 
     ).then((response: any) => {
-      console.log(response);
       axios.post(`${BackURL}/user/signin`,
         {
           email: login,

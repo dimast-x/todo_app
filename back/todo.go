@@ -65,8 +65,8 @@ type UpdateTaskParameters struct {
 func NewInMemoryToDo() *InMemoryToDo {
 	return &InMemoryToDo{
 		userCounter:  0,
-		listsCounter: 0,
-		tasksCounter: 0,
+		listsCounter: 1,
+		tasksCounter: 1,
 		todos:        make(map[int]UserToDo),
 	}
 }

@@ -42,6 +42,7 @@ function App() {
     var res;
     if (tasks) {
       tasks.sort((a: any, b: any) => (a.id > b.id) ? 1 : -1)
+
       res = tasks.map(function (task: any) {
         if (task.status !== "completed") {
           return (
@@ -75,14 +76,14 @@ function App() {
   }, [tasks]);
 
   React.useEffect(() => {
-    if(currentlist) {
-      var list = document.getElementById(currentlist[1]+currentlist[0]);   
+    if (currentlist) {
+      var list = document.getElementById(currentlist[1] + currentlist[0]);
       var items = document.querySelectorAll(".lists");
       [].forEach.call(items, function (item: HTMLElement | null) {
         item?.classList.remove("bg-amber-200")
       });
       list?.classList.toggle("bg-amber-200");
-    }    
+    }
   }, [currentlist]);
 
 
